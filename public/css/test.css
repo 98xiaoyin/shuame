@@ -1,0 +1,139 @@
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+/* =e Reset */
+
+/*中间部分*/
+.ag7-main{margin: 0 auto; width: 1000px;}
+.ag7-main .phone-index-banner{display: none;}
+
+/*左侧栏*/
+.ag7-cont{width: 680px; float: left;}
+
+.wrap{width:1000px; margin-left:auto; margin-right:auto;}  
+/*公共*/
+.yahei{font-family:'\5FAE\8F6F\96C5\9ED1';}
+.songti{font-family:"NSimSun","SimSun",Arial;}
+
+/*首页右侧*/
+.aside{width:280px; float:right;}
+
+.ag7-bannerslide{position: relative; margin-bottom: 50px; }
+.ag7-bannerslide .slidebox{position: relative; height: 440px;}
+.ag7-bannerslide .slidebox li{display:block; position: absolute; width:100%; height: 100%; left:0px; top:0px;}
+.ag7-bannerslide a img{display:block; max-width: 100%;}
+.ag7-bannerslide .slideinfo{width:310px; height: 160px; position: absolute; left:0px; bottom:50px; background:rgba(0,0,0,0.5); z-index: 10;}
+.ag7-bannerslide .slidetitle{height: 70px; padding:25px; color: #fff; font-family: 微软雅黑;}
+.ag7-bannerslide .slidetitle h2{font-size: 30px; height:50px; line-height: 50px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;color: white;}
+.ag7-bannerslide .slidetitle h3{font-size: 18px;color: white;}
+.ag7-bannerslide .slidelist{height:32px;width:100%; padding:9px 0; background:rgba(0,0,0,0.3); position: relative;}
+.ag7-bannerslide .slidelist ul{text-align: center;margin-top: 28px;}
+.ag7-bannerslide .slidelist ul li{display: inline-block; margin:0 4px;  width: 50px; height: 22px; cursor: pointer;}
+
+
+
+.phone-index-banner{position: relative;}
+.phone-index-banner img{display: block;}
+.phone-index-banner h3{position: absolute; width: 100%; bottom:0px; font-size:14px; height: 40px; padding:0 10px; -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box; line-height: 40px; background:rgba(0,0,0,.5); color: #fff; font-family: 微软雅黑;}
+
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+a:hover,a:focus{color:#74777b;text-decoration: none;}
+a{color: #666666;}
+.slidebox li{
+	width: 1100px;
+	height: 400px;
+}
+/*中间*/
+
+
+figure.effect-layla img {
+	cursor: pointer;
+	min-width:80%;
+	height: -webkit-calc(100% + 40px);
+	height: calc(100% + 80px);
+}
+
+figure.effect-layla figcaption {
+	padding: 3em;
+}
+
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+	position: absolute;
+	content: '';
+	opacity: 0;
+}
+
+figure.effect-layla h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-layla p {
+	padding: 0.5em 2em;
+	text-transform: none;
+	opacity: 0;
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla h2 {
+	
+	-webkit-transform: translate3d(0,-30px,0);
+	transform: translate3d(0,-30px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-layla:hover img {
+	opacity: 0.7;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+	cursor: pointer;
+}
