@@ -5,14 +5,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="renderer" content="webkit" />
-		<meta name="robots" content="index, follow" />
 		<title>我的网站</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/index.css">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script src="js/vue.js"></script>
 		
 	</head>
@@ -52,10 +47,10 @@
 				<div class="content ">
 					<a href="#" class=" col-sm-12 col-md-2 lcard">
 						<div style="background-image:url(images/5.jpg)" class="front">
-							<p>iPhone XS汇总</p>
+							<p v-text="res[0].title"></p>
 						</div>
 						<div class="back">
-							<p class="my_small">一切关于这台苹果的年度真·旗舰——iPhone XS Max，都在这里了。</p>
+							<p class="my_small" v-text="res[0].detail"></p>
 							<button class="button">
 								了解一下
 							</button>
