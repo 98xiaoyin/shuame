@@ -8,46 +8,53 @@
 		<title>我的网站</title>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/index.css">
+		<script src="js/axios.min.js"></script>
+		<script src="js/qs.min.js"></script>
 		<script src="js/vue.js"></script>
-		
+		 
 	</head>
 
 	<body>
 		<header class="container" id="header"></header>
 		<div class="container">
 			<main>
-				<div class="box">
-					<div class="list"> 
-						<ul>
-							<li class="p4">
-								<a href="#"><img src="images/1.png" alt=""></a>
-							</li>
-							<li class="p3">
-								<a href="#"><img src="images/2.png" alt=""></a>
-							</li>
-							<li class="p2">
-								<a href="#"><img src="images/3.png" alt=""></a>
-							</li>
-							<li class="p1">
-								<a href="#"><img src="images/4.jpg" alt=""></a>
-							</li>
-						</ul>
+			<!--
+				轮播区域
+			-->
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<img class="d-block w-100" src="images/1.png" alt="First slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block w-100" src="images/2.png" alt="Second slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block w-100" src="images/3.png" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block w-100" src="images/4.jpg" alt="4th slide">
+					  </div>
 					</div>
-
-					<a href="#" class="prev btn"><</a>
-					<a href="#" class="next btn">></a>
-
-					<div class="buttons">
-						<a href="#"><span class="blue"></span></a>
-						<a href="#"><span></span></a>
-						<a href="#"><span></span></a>
-						<a href="#"><span></span></a>
-					</div>
-				</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="sr-only">Next</span>
+					</a>
+				  </div>
 				<div class="content ">
 					<a href="#" class=" col-sm-12 col-md-2 lcard">
 						<div style="background-image:url(images/5.jpg)" class="front">
-							<p v-text="res[0].title"></p>
+							<p>{{res.data[0].title}}</p>
 						</div>
 						<div class="back">
 							<p class="my_small" v-text="res[0].detail"></p>
@@ -269,6 +276,7 @@
 			<footer id="footer" class="container"></footer>
 		</div>
 		<script src="js/jquery-3.1.1.min.js"></script>
+		<<script src="js/bootstrap.min.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/footer.js"></script>

@@ -28,7 +28,8 @@
                 </div>
             </div>
             <div class="lg_foot">
-            <input type="submit" value="登录" class="bn" /></div>
+            <input type="submit" value="登录" class="bn" />
+			</div>
         </form>
         </div>
         <script src="js/jquery-3.1.1.min.js"></script>
@@ -56,6 +57,23 @@
                     e
                 )
             })
+
+
+			$(".bn").click(function (){
+				$.post("users/signin",{
+					"uname":$(".ur").val(),
+					"upwd":$(".pw").val()
+				},function (result) {
+					console.log(result);
+					  if(result.ok=="1") {
+						alert("登陆成功!返回首页,小老板");
+						window.location=
+						"http://localhost:3000/index.html";
+					  }else if(result.ok=="0"){
+						alert("小老板 输错了")
+					  }
+				})			
+			})
         </script>
 </body>
 </html>
